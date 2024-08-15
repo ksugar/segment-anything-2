@@ -477,7 +477,7 @@ def benchmark(
         # print to file
         result_path = path.join(mask_root, "results.csv")
         print(f"Saving the results to {result_path}")
-        with open(result_path, "w") as f:
+        with open(result_path, "w", encoding="utf-8") as f:
             f.write(out_string)
 
         all_global_jf.append(global_jf)

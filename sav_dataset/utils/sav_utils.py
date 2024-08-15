@@ -116,7 +116,7 @@ class SAVDataset:
             print(f"{manual_annot_path} doesn't exist. Something might be wrong.")
             manual_annot = None
         else:
-            manual_annot = json.load(open(manual_annot_path))
+            manual_annot = json.load(open(manual_annot_path, encoding="utf-8"))
 
         # load the manual annotations
         auto_annot_path = os.path.join(self.sav_dir, video_id + "_auto.json")
@@ -124,7 +124,7 @@ class SAVDataset:
             print(f"{auto_annot_path} doesn't exist.")
             auto_annot = None
         else:
-            auto_annot = json.load(open(auto_annot_path))
+            auto_annot = json.load(open(auto_annot_path, encoding="utf-8"))
 
         return frames, manual_annot, auto_annot
 

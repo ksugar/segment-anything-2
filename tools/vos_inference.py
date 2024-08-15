@@ -287,7 +287,7 @@ def main():
     # if a video list file is provided, read the video names from the file
     # (otherwise, we use all subdirectories in base_video_dir)
     if args.video_list_file is not None:
-        with open(args.video_list_file, "r") as f:
+        with open(args.video_list_file, "r", encoding="utf-8") as f:
             video_names = [v.strip() for v in f.readlines()]
     else:
         video_names = [
