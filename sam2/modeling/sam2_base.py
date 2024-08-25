@@ -653,7 +653,7 @@ class SAM2Base(torch.nn.Module):
         pix_feat_with_mem = self.memory_attention(
             curr=current_vision_feats,
             curr_pos=current_vision_pos_embeds,
-            memory=memory,
+            memory=memory.float(),
             memory_pos=memory_pos_embed,
             num_obj_ptr_tokens=num_obj_ptr_tokens,
         )
